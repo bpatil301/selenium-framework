@@ -1,6 +1,6 @@
 Groovvy
 
-pipline
+pipeline
 {
 agent any
 
@@ -10,14 +10,14 @@ stage('Checkout')
 {
 steps
 {
-git 'https://github.com/bpatil301/selenium-framework.git
+git 'https://github.com/bpatil301/selenium-framework.git'
 }
 }
 stage('Build')
 {
 steps
 {
-sh ''mvn clean test
+sh 'mvn clean test'
 }
 }
 }
