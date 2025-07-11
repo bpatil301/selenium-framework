@@ -1,23 +1,17 @@
 pipeline {
 agent any
-
 stages {
-stage('Checkout') {
-steps {
- git 'https://github.com/bpatil301/selenium-framework.git'
- }
- }
 stage('Build') {
 steps {
 sh 'mvn clean test'
- }
- }
- }
+}
+}
+}
 
 post {
 success {
 echo 'Build Success!'
- }
+}
 failure {
 echo 'Build failed!'
 }
